@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homenagem_ai.ui.HomeFragment"
+        android:label="Homenagem IA"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment"
+            app:destination="@id/formFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.homenagem_ai.ui.FormFragment"
+        android:label="Formulário"
+        tools:layout="@layout/fragment_form">
+
+        <argument
+            android:name="tipoHomenagem"
+            app:argType="string"
+            android:defaultValue="Outro" />
+
+        <action
+            android:id="@+id/action_formFragment_to_uploadFotosFragment"
+            app:destination="@id/uploadFotosFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadFotosFragment"
+        android:name="com.example.homenagem_ai.ui.UploadFotosFragment"
+        android:label="UploadFotosFragment">
+
+        <action
+            android:id="@+id/action_uploadFotosFragment_to_uploadAudiosFragment"
+            app:destination="@id/uploadAudiosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadAudiosFragment"
+        android:name="com.example.homenagem_ai.ui.UploadAudiosFragment"
+        android:label="UploadAudiosFragment">
+
+        <action
+            android:id="@+id/action_uploadAudiosFragment_to_uploadVideosFragment"
+            app:destination="@id/uploadVideosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadVideosFragment"
+        android:name="com.example.homenagem_ai.ui.UploadVideosFragment"
+        android:label="UploadVideosFragment">
+
+        <action
+            android:id="@+id/action_uploadVideosFragment_to_uploadMusicaFragment"
+            app:destination="@id/uploadMusicaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadMusicaFragment"
+        android:name="com.example.homenagem_ai.ui.UploadMusicaFragment"
+        android:label="UploadMusicaFragment">
+
+        <action
+            android:id="@+id/action_uploadMusicaFragment_to_timelineFragment"
+            app:destination="@id/timelineFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.example.homenagem_ai.ui.TimelineFragment"
+        android:label="Timeline">
+
+        <action
+            android:id="@+id/action_timelineFragment_to_processamentoFragment"
+            app:destination="@id/processamentoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/processamentoFragment"
+        android:name="com.example.homenagem_ai.ui.ProcessamentoFragment"
+        android:label="Processamento"
+        tools:layout="@layout/fragment_processamento">
+
+        <action
+            android:id="@+id/action_processamentoFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.example.homenagem_ai.ui.ResultadoFragment"
+        android:label="Resultado">
+
+        <action
+            android:id="@+id/action_resultadoFragment_to_timelineFragment"
+            app:destination="@id/timelineFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/text_background_claro">
+
+    <TextView
+        android:id="@+id/tvNomeAudio"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="audio.mp3"
+        android:textSize="16sp"
+        android:padding="6dp"
+        android:textColor="#000000"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <EditText
+        android:id="@+id/etNomePessoa"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Quem falou?"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:background="@drawable/text_background_claro"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
